@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: bot-omr-claro
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TOKEN
+        sync: false
+      - key: GROQTOKEN
+        sync: false
+      - key: RENDER_URL
+        sync: false
