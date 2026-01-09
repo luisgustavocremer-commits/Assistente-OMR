@@ -4,8 +4,8 @@ from groq import Groq
 import os
 
 TOKEN = os.getenv("TOKEN")
-GROQ_API_KEY = "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"
-RENDER_URL = os.getenv("RENDER_URL")  # URL que o Render vai gerar
+GROQ_API_KEY = os.getenv("GROQTOKEN")
+RENDER_URL = os.getenv("https://assistente-omr.onrender.com")  # URL que o Render vai gerar
 
 client = Groq(api_key=GROQ_API_KEY)
 
@@ -77,3 +77,4 @@ async def main():
 if __name__ == '__main__':
     import asyncio
     asyncio.run(main())
+
